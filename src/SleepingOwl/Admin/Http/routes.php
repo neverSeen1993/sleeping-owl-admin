@@ -1,5 +1,5 @@
 <?php
-Route::group(['middleware'=>'web'], function() {
+Route::group(['domain'=>env('ADMIN_DOMAIN'),'middleware'=>'web'], function() {
 	Route::get('login', [
 		'as'   => 'admin.login',
 		'uses' => 'AuthController@getLogin',
